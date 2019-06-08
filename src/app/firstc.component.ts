@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
 	template: `<h2>Mi primer componente</h2>
 		<h3>{{nombre+' '+getApellidos()}}</h3>
 		<button [disabled] = "btnStatus" >Click aquí</button><br>
-	    <button [class.green-back] = "classBinding" (click)="change($event)" >Click aquí</button>
+	    <button [class.green-back] = "classBinding"  (click)="change($event)" >Click aquí</button>
 	`,
 	styles: [`h2{ color: gray }`,`
 			.green-back{
