@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PersonasService } from './ejemploservice.service';
 
 @Component({
   selector: 'app',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-test';
+  personas=[];
+  constructor(private personaservice: PersonasService){
+    this.personas=this.personaservice.getPersonas();
+  }
 }
