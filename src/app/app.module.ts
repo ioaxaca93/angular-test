@@ -10,6 +10,7 @@ import { DirectivasComponent } from './directivas/directivas.component';
 import { MyDirective } from './mi-directiva.directive';
 import { PipesExampleComponent } from './pipes-example/pipes-example.component';
 import { ResumirPipe } from './resumir.pipe';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { ResumirPipe } from './resumir.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
