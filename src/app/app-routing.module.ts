@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ChildComponent } from './child/child.component';
 import { DirectivasComponent } from './directivas/directivas.component';
 import { PipesExampleComponent } from './pipes-example/pipes-example.component';
 import { FirstC } from './firstc.component';
+import { ParamsComponent } from './params/params.component';
 
 const routes: Routes = [
   {
@@ -19,12 +19,21 @@ const routes: Routes = [
     component: FirstC
   },
   {
+    path:'params/:param/:param2',
+    component: ParamsComponent
+  },
+  {
+    path:'father',
+    loadChildren: './father/father.module#FatherModule'
+  },
+  {
     path:'**',
     redirectTo: 'first'
   }  
 ];
 
 @NgModule({
+  declarations:[],
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })

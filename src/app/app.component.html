@@ -2,5 +2,16 @@
 <ul>
     <li *ngFor="let persona of personas">{{persona.id}}  {{persona.nombre}}  {{persona.edad}}</li>
 </ul>
+<p>routingLink</p>
+<ul>
+    <li>
+        <a routerLink="/pipes" >Pipes</a>
+    </li>
+    <li><a routerLink="/directivas" >Directivas</a></li>
+    <li><a routerLink="/first" >First</a></li>
+    <li><a routerLink="/father" >Father</a></li>
+    <li><a (click)="onClick()" [routerLink]="['/params',param, param+1]" [queryParams]="{ qp: 'Holaaa'}" >params</a></li>
+
+</ul>
 <router-outlet></router-outlet>
   

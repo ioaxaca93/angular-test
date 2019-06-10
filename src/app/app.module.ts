@@ -11,7 +11,8 @@ import { MyDirective } from './mi-directiva.directive';
 import { PipesExampleComponent } from './pipes-example/pipes-example.component';
 import { ResumirPipe } from './resumir.pipe';
 import { HttpClientModule } from '@angular/common/http';
-
+import { ParamsComponent } from './params/params.component';
+import { FatherModule } from './father/father.module';
 
 @NgModule({
   declarations: [
@@ -21,13 +22,15 @@ import { HttpClientModule } from '@angular/common/http';
     DirectivasComponent,
     MyDirective,
     PipesExampleComponent,
-    ResumirPipe
+    ParamsComponent,
+    ResumirPipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FatherModule
   ],
   providers: [],
   bootstrap: [AppComponent]

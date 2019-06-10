@@ -10,6 +10,7 @@ import { getService } from './getService.service';
 export class AppComponent implements OnInit{
   title = 'angular-test';
   personas=[];
+  param : number=0;
   constructor(private personaservice: PersonasService, private getService: getService){
     this.personas=this.personaservice.getPersonas();
   }
@@ -23,5 +24,9 @@ export class AppComponent implements OnInit{
         coments=data;
         console.log(coments)
       });
+  }
+
+  onClick(){
+    this.param++;
   }
 }
