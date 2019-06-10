@@ -1,0 +1,15 @@
+<h1>
+  pipes-example works!
+</h1>
+
+<diV style="padding: 20px">
+  <p>{{curso.titulo | uppercase}}</p><hr>
+  <p>{{curso.titulo | lowercase}}</p><hr>
+  <p>{{curso.estudiantes | number}}</p><hr>
+  <p>{{curso.rating | number:'1.2-2'}}</p><hr><!--un numero entero minimo dos decimales máximo dos decimales-->
+  <p>{{curso.precio | currency}}</p><hr>
+  <p>{{curso.precio | currency:'AUD'}}</p><hr><!--simbolo de dolar australiano-->
+  <p>{{curso.precio | currency: 'CAD'}}</p><hr><!--Simbolo de dolar Australiano-->
+  <p>{{curso.fecha | date }}</p><hr>
+  <p>{{texto | resumir: 10}}</p>
+</diV>

@@ -8,6 +8,8 @@ import { FirstC } from './firstc.component';
 import { ChildComponent } from './child/child.component';
 import { DirectivasComponent } from './directivas/directivas.component';
 import { MyDirective } from './mi-directiva.directive';
+import { PipesExampleComponent } from './pipes-example/pipes-example.component';
+import { ResumirPipe } from './resumir.pipe';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import { MyDirective } from './mi-directiva.directive';
     FirstC,
     ChildComponent,
     DirectivasComponent,
-    MyDirective
+    MyDirective,
+    PipesExampleComponent,
+    ResumirPipe
   ],
   imports: [
     BrowserModule,
