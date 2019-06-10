@@ -1,0 +1,38 @@
+<hr/>
+<p>
+  directivas works!
+</p>
+<br>
+<h1>Directiva ngIf</h1>
+<button type="button" (click)="change()">Dame click!</button>
+<br>
+<div *ngIf="isValid ; then siValido else noValido"></div>
+<ng-template #siValido>
+  <p No valido >Si Valido</p>
+</ng-template>
+<ng-template #noValido>
+    <p No valido >No Valido</p>
+</ng-template>
+<h1>Directiva ngFor, ngSwitch, ngSwitchCase y ngSwitchDefault</h1>
+<ul  *ngFor="let persona of personas" [ngSwitch]="persona.nombre">
+  <li *ngSwitchCase="'Israel'" style="color: brown">{{persona.id}} {{persona.nombre}} edad: {{persona.edad}}</li>
+  <li *ngSwitchCase="'Mario'" style="color:cadetblue">{{persona.id}} {{persona.nombre}} edad: {{persona.edad}}</li>
+  <li *ngSwitchDefault style="color:gray">{{persona.id}} {{persona.nombre}} edad: {{persona.edad}}</li>
+
+</ul>
+<hr>
+<h1>Directiva ngStyle y ngClass</h1>
+<label>Numero: </label><input type="number" [(ngModel)]="numero" />
+<br>
+<p [ngStyle]="{ 'color' : getColor() }">El texto será rojo si numero menor que 18 de lo contrario será verde</p>
+<p [ngClass]="{ 'mi-clase-1' : numero < 18, 'mi-clase-2' : !(numero < 18) }">El fondo será rojo si numero menor que 18 de lo contrario será verde</p>
+<hr>
+<h1>Directiva Personalizada myDirective</h1>
+<div myDirective style="font-size: 30px">
+  Directiva personalizada (pasa el mouse sobre mi)
+</div>
+<br>
+<div [myDirective]="'green'" style="font-size: 30px">
+  Directiva personalizada (pasa el mouse sobre mi)
+</div>
+

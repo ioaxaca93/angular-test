@@ -6,13 +6,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FirstC } from './firstc.component';
 import { ChildComponent } from './child/child.component';
+import { DirectivasComponent } from './directivas/directivas.component';
+import { MyDirective } from './mi-directiva.directive';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     FirstC,
-    ChildComponent
+    ChildComponent,
+    DirectivasComponent,
+    MyDirective
   ],
   imports: [
     BrowserModule,
