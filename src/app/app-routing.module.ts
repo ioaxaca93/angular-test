@@ -4,6 +4,8 @@ import { DirectivasComponent } from './directivas/directivas.component';
 import { PipesExampleComponent } from './pipes-example/pipes-example.component';
 import { FirstC } from './firstc.component';
 import { ParamsComponent } from './params/params.component';
+import { Form1Component } from './form1/form1.component';
+import { Form2Component } from './form2/form2.component';
 
 const routes: Routes = [
   {
@@ -21,6 +23,14 @@ const routes: Routes = [
   {
     path:'params/:param/:param2',
     component: ParamsComponent
+  },
+  {
+    path:'form1',
+    component: Form1Component
+  },
+  {
+    path:'form2',
+    component: Form2Component
   },
   {
     path:'father',

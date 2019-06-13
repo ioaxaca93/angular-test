@@ -1,0 +1,27 @@
+<p>
+  form2 works!
+</p>
+<div class="container">
+    <form  >
+      {{ usuario | json }}
+      <div class="form-group" >
+        <label for="nombre">Name:</label>
+        <input [(ngModel)]="usuario.nombre" [class.is-invalid]="nombre.invalid" #nombre="ngModel" minlength="5" required name="nombre" type="text" id="nombre" class="form-control"/>
+        <div *ngIf="nombre.invalid">
+          <small class="text-danger" *ngIf="nombre.errors.required">El nombre es obligatorio</small>
+          <small class="text-danger" *ngIf="nombre.errors.minlength">Minimo 5 caracteres</small>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input [(ngModel)]="usuario.phone" [class.is-invalid]="phone.invalid" minlength="8" maxlength="10" #phone="ngModel" name="phone" type="tel" id="phone" class="form-control"/>
+        <small class="text-danger" *ngIf="phone.invalid" >Minimo 8 caracteres maximo 10</small>
+      </div>
+      {{phone.invalid}}
+      <div class="form-group">
+        <label for="msj">Message:</label>
+        <textarea [(ngModel)]="usuario.msj" name="msj" id="msj" cols="30" rows="10" class="form-control"></textarea>
+      </div>
+      <button class="btn btn-primary" (click)="onClick()">Enviar</button>
+    </form>
+  </div>

@@ -1,0 +1,29 @@
+<p>
+  form1 works!
+</p>
+<div class="container">
+  <form #usuarioForm="ngForm" (ngSubmit)="onSubmit(usuarioForm)">
+    {{ usuarioForm.value | json }}
+    <div class="form-group">
+      <label for="nombre">Name:</label>
+      <input ngModel name="nombre" [class.is-invalid]="nombre.invalid" minlength="5" #nombre="ngModel" required type="text" id="nombre" class="form-control"/>
+      <div *ngIf="nombre.invalid">
+          <small class="text-danger" *ngIf="nombre.errors.required">El nombre es obligatorio</small>
+          <small class="text-danger" *ngIf="nombre.errors.minlength">Minimo 5 caracteres</small>
+        </div>
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone:</label>
+      <input ngModel name="phone" #phone="ngModel" required [class.is-invalid] type="text" id="phone" class="form-control"/>
+    </div>
+    <div class="form-group">
+      <input ngModel  type="checkbox" id="suscribirse" class="form-check-level" #suscribirse="ngModel" name="suscribirse"/>
+      <label for="suscribirse">Suscribirse</label>
+    </div>
+    <div class="form-group">
+      <label for="msj">Message:</label>
+      <textarea ngModel name="msj" id="msj" cols="30" rows="10" class="form-control"></textarea>
+    </div>
+    <button class="btn btn-primary" type="submit" [disabled]="!usuarioForm.valid" >Enviar</button>
+  </form>
+</div>

@@ -13,6 +13,8 @@ import { ResumirPipe } from './resumir.pipe';
 import { HttpClientModule } from '@angular/common/http';
 import { ParamsComponent } from './params/params.component';
 import { FatherModule } from './father/father.module';
+import { Form1Component } from './form1/form1.component';
+import { Form2Component } from './form2/form2.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { FatherModule } from './father/father.module';
     PipesExampleComponent,
     ParamsComponent,
     ResumirPipe,
+    Form1Component,
+    Form2Component,
   ],
   imports: [
     BrowserModule,
